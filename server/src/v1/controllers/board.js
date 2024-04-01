@@ -78,7 +78,7 @@ exports.update = async (req, res) => {
       } else {
         for (const key in favourites) {
           const element = favourites[key]
-          await Board.findByIdAndUpdate(
+          await Board.findByIdAndUpdate( 
             element.id,
             { $set: { favouritePosition: key } }
           )
